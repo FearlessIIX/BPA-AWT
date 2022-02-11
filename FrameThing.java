@@ -35,7 +35,7 @@ public class Shapes extends JFrame {
         // Creating the Frame Buttons
         JButton create_shape = new JButton("Create");
         JButton clear_shape = new JButton("Clear");
-        JToggleButton toggle_fill = new JToggleButton("Outline");
+        JToggleButton toggle_fill = new JToggleButton("Outlined");
         
         // Inserting and sizing the Buttons
         create_shape.setBounds(75, 400, 100, 40);
@@ -313,7 +313,7 @@ class ToggleListener implements ActionListener {
         JToggleButton target = (JToggleButton) e.getSource();
 
         // Shapes are currently outlined
-        if (target.getText().equalsIgnoreCase("outline")) {
+        if (target.getText().equalsIgnoreCase("outlined")) {
             // Fires Method on Canvas toggleShapes, set to fill
             canvas.toggleShapes(canvas.getGraphics(), true);
             // Sets button text to Filled
